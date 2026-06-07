@@ -1,0 +1,57 @@
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcome h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.welcome p{
+  color: #dbdee1;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 316px;
+    width: 448px;
+    gap: 12px;
+}
+
+input{
+    width: 416px;
+    height: 42px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #35353C;
+    border: 1px solid;
+    font-weight: 400;
+    border-color: #444549;
+    color: aliceblue;
+}
+
+input:focus{
+    border-color: #4f86e6;
+    outline: none; 
+    transition: border-color 0.2s;
+}
+
+.registre{
+    color: #A3A4AA;
+}
+
+.required{
+    color: #F69C97;
+}
+
+p{
+    font-size: 12px;
+    font-weight: 400;
+}
