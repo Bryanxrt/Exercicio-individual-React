@@ -1,29 +1,38 @@
-import styles from "./styles.module.css";
-import qr from "../../assets/qr.png";
+﻿import qr from "../../assets/qr.png";
 import Form from "../../components/Form/form";
 import discordLogo from "../../assets/discord-logo.png";
+import {
+  Container,
+  DiscordBrand,
+  ImageContainer,
+  LoginBox,
+  QrCode,
+  QrText,
+  QrTextDescription,
+} from "./styles";
 
 export default function Login() {
   return (
-    <div className={styles.container}>
-      <div className={styles.discordBrand}>
+    <Container>
+      <DiscordBrand>
         <img src={discordLogo} alt="Discord" />
-      </div>
-      <div className={styles.loginBox}>
-        <Form></Form>
+      </DiscordBrand>
 
-        <div className={styles.imageContainer}>
-          <img src={qr} alt="qr code" className={styles.qr} />
-          <div className={styles.txtQr}>
+      <LoginBox>
+        <Form />
+
+        <ImageContainer>
+          <QrCode src={qr} alt="qr code" />
+          <QrText>
             <h3>Entrar com código QR</h3>
-            <p className={styles.p1}>
-              Escanei isto com <strong>app movel do Discord</strong> para fazer
+            <QrTextDescription>
+              Escaneie isto com <strong>app móvel do Discord</strong> para fazer
               login imediatamente.
-            </p>
+            </QrTextDescription>
             <a href="#">Ou, faça login com uma passkey</a>
-          </div>
-        </div>
-      </div>
-    </div>
+          </QrText>
+        </ImageContainer>
+      </LoginBox>
+    </Container>
   );
 }

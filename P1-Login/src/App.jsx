@@ -1,10 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-import Login from './pages/Login/login'
+﻿import Login from './pages/Login/login'
+import { GlobalStyle } from './styles/GlobalStyle'
+import backgroundImage from './assets/image.png'
 
 function App() {
   return (
-    <Login />
+    <>
+      <GlobalStyle backgroundImage={backgroundImage} />
+      <Login />
+    </>
   )
 }
 
